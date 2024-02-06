@@ -1,0 +1,128 @@
+1. Is python a procedural language or OOP language? 
+   Answer : Python is a Object oriented Programming language but also supports procedural Programming that is the reason why python is known as multi paradigm language
+
+2. Difference between LIST AND TUPLE.How are both different from Dictionary type?
+   Answer : The main Difference between List and a Tuple is List are mutable but Tupples are immutable , List and Tuple dont have any fliexablity to change the "Keys" we only have the ablity to change the Values of List and Tuples but in Dictionary we can have our own Key value pairs 
+
+3. How do you ensure scope of a block(method or a for loop or a if else) in python? (Examples)
+   Answer : The variable that Diclared in a block will have block scope that is they can be  accessed only in that paticular block Where as globally diclared varables can be accessed any where in the programe  
+
+
+4. How to give reference to a module in python?
+   Answer : We can use Import keyword or else we can User From plus Import togethe import is referenced for modules and From is used for referenceing the packages 
+
+
+
+5. What is wrong with the following code?
+
+	def int,int SumAndDivide(int a, int b):    
+    		c = a + b
+   	 	d = a/b
+    		return c,d
+
+   Answer : we are divinding a/b to get d but we are not expection handiling some of the cases where b may = 0 , Annotations decleraction is different from expected 
+
+
+6. What is the output of the following code?
+
+   for letter in 'Python': 
+      if letter == 'h':
+         pass
+         print 'This is pass block'
+      print 'Current Letter :', letter
+
+      Current Letter : P
+      Current Letter : y
+      Current Letter : t
+      Current Letter : h
+      Current Letter : o
+      Current Letter : n
+
+
+   for letter in 'Python': 
+      if letter == 'h':
+         continue
+         print 'This is continue block'
+      print 'Current Letter :', letter
+
+
+      Current Letter : P
+      Current Letter : y
+      Current Letter : t
+      Current Letter : o
+      Current Letter : n
+
+   
+   for letter in 'Python': 
+      if letter == 'h':
+         break
+         print 'This is break block'
+      print 'Current Letter :', letter
+
+      Current Letter : P
+      Current Letter : y
+      Current Letter : t
+ 
+
+7.Write program to find the first non-repeating character in a sorted string (E.g:'AAAAABBBCDDDEEEE' => 'C')
+
+   Answer :
+      def NonRepeating(s):
+      for i in range(len(s)):
+         if s.count(s[i]) == 1:
+               return s[i]
+      return None
+
+   string = input("Enter a string: ")
+   print(NonRepeating(string))
+
+8. What is the output of the program?
+class A(object):
+      def hello(self):
+          print 'It is class A'
+ 
+class B(A):
+      def hello(self):
+          print 'It is class B'
+ 
+class C(A,B):
+      def hello(self):
+          print 'It is class C'
+ 
+if __name__ == "__main__":
+   c = C()
+   c.hello()
+
+   Answer: It is class C
+
+9.What is __init__.py? Give an example of where you would use it.
+   Answer : When we have multiple modules in a Directory  to convert it into a python Package we usually place an empty __init__.py file to convert it into python module 
+
+
+10.Write Fibonacci series in more than one way.
+
+   #Using recursion 
+   def fibonacci_recursive(n):
+  if n == 0:
+    return 0
+  elif n == 1:
+    return 1
+  else:
+    return fibonacci_recursive(n-1) + fibonacci_recursive(n-2)
+
+# Example usage
+for i in range(10):
+  print(fibonacci_recursive(i))
+
+#Iteration using 2 varables
+
+def fibonacci_iterative(n):
+  a, b = 0, 1
+  for _ in range(n):
+    a, b = b, a + b
+  return a
+
+# Example usage
+for i in range(10):
+  print(fibonacci_iterative(i))
+
