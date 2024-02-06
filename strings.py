@@ -41,4 +41,5 @@ def append_middle(str1 , str2):
 
 print("{}".format(1))
 print(type("{}".format(1)))
+
  
